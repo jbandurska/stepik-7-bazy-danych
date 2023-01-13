@@ -1,0 +1,53 @@
+GET http://localhost:5000/product
+Content-Type: application/json
+
+{
+    "sort": {
+        "kategoria": "cena",
+        "kolejnosc": 1
+    }
+}
+
+###
+
+GET http://localhost:5000/product
+Content-Type: application/json
+
+{
+    "filter": {
+        "kategoria": "nazwa",
+        "klucz": "el"
+    }
+}
+
+###
+
+POST http://localhost:5000/product/add
+Content-type: application/json
+
+{
+  "nazwa": "Popcorn maślany",
+  "cena": 1.95,
+  "opis": "Jedzenie",
+  "ilosc": 30,
+  "jednostka": "sztuki"
+}
+
+###
+
+PUT http://localhost:5000/product/63c186ea517953380f65168f
+Content-type: application/json
+
+{
+  "opis": "Coś więcej niż jedzenie",
+  "ilosc": 27
+}
+
+###
+
+DELETE http://localhost:5000/product/63c17f4250c5016b166abdb5
+
+###
+
+GET http://localhost:5000/product/generate/report
+Accept: application/json
