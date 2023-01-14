@@ -1,0 +1,76 @@
+GET http://localhost:5000/employees
+Content-Type: application/json
+
+{
+    "sort": "nazwisko"
+}
+
+###
+
+GET http://localhost:5000/employees
+Content-Type: application/json
+
+{
+    "filter": {
+        "kategoria": "imie",
+        "klucz": "a"
+    },
+    "sort": "nazwisko"
+}
+
+###
+
+GET http://localhost:5000/employees
+Content-Type: application/json
+
+{}
+
+###
+
+GET http://localhost:5000/movies/The%20Matrix
+Accept: application/json
+
+###
+
+POST http://localhost:5000/employees
+Content-Type: application/json
+
+{
+  "imie": "Steven",
+  "nazwisko": "Strange",
+  "stanowisko": "Czarodziej",
+  "departament": "Avengers"
+}
+
+
+###
+
+PUT http://localhost:5000/employees/4:b6256e1a-a06b-4876-ad15-46f1d920da0c:172
+Content-Type: application/json
+
+{
+  "imie": "Ogniste",
+  "nazwisko": "Serce",
+  "stanowisko": "Wojownik",
+  "departament": "Klan Pioruna"
+}
+
+### 
+
+DELETE http://localhost:5000/employees/4:b6256e1a-a06b-4876-ad15-46f1d920da0c:172
+
+### 
+
+GET http://localhost:5000/employees/4:b6256e1a-a06b-4876-ad15-46f1d920da0c:178/subordinates
+
+### 
+
+GET http://localhost:5000/employees/4:b6256e1a-a06b-4876-ad15-46f1d920da0c:178/department
+
+### 
+
+GET http://localhost:5000/employees/departments
+
+### 
+
+GET http://localhost:5000/departments/4:b6256e1a-a06b-4876-ad15-46f1d920da0c:179/employees
